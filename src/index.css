@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.shdw {
+  box-shadow: 0px 3px 15px rgba(0, 100, 255, 0.5);
+}
+
+.shdw2 {
+  box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.shdw3 {
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hdn {
+  margin-bottom: -160px;
+}
