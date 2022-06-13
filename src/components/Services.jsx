@@ -51,7 +51,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="mt-5 pt-20">
+    <div id="services" className="mt-5 pt-20">
       <h1 className="font-Poppins px-5 font-bold text-2xl text-center">
         Services
       </h1>
@@ -106,9 +106,9 @@ const Services = () => {
       <div
         className={`${
           showUiUx ? "top-0 bottom-0 opacity-100" : "opacity-0"
-        } fixed left-0 right-0 bg-gray-500 px-10 bg-opacity-50 transition-all duration-300 w-full items-center flex flex-col justify-center`}
+        } fixed left-0 right-0 bg-gray-500 z-[2000] px-10 bg-opacity-50 transition-all duration-300 w-full items-center flex flex-col justify-center`}
       >
-        <div className="bg-white w-[360px] p-5 rounded-xl">
+        <div className="bg-white sm:w-[360px] p-5 rounded-xl">
           <div className="flex items-center justify-between">
             <p className="font-Poppins font-semibold text-xl">Ui/Ux Designer</p>
             <button onClick={closeButton}>
@@ -142,9 +142,9 @@ const Services = () => {
       <div
         className={`${
           showFrontend ? "top-0 bottom-0 opacity-100" : "opacity-0"
-        } fixed left-0 right-0 bg-gray-500 px-10 bg-opacity-50 transition-all duration-300 w-full items-center flex flex-col justify-center`}
+        } fixed left-0 right-0 bg-gray-500 z-[2000] px-10 bg-opacity-50 transition-all duration-300 w-full items-center flex flex-col justify-center`}
       >
-        <div className="bg-white w-[360px] p-5 rounded-xl">
+        <div className="bg-white sm:w-[360px] p-5 rounded-xl">
           <div className="flex items-center justify-between">
             <p className="font-Poppins font-semibold text-xl">
               Frontend Developer
@@ -180,9 +180,9 @@ const Services = () => {
       <div
         className={`${
           showBrandingDesigner ? "top-0 bottom-0 opacity-100" : "opacity-0"
-        } fixed left-0 right-0 bg-gray-500 px-10 bg-opacity-50 transition-all duration-300 w-full items-center flex flex-col justify-center`}
+        } fixed left-0 right-0 bg-gray-500 z-[2000] px-10 bg-opacity-50 transition-all duration-300 w-full items-center flex flex-col justify-center`}
       >
-        <div className="bg-white w-[360px] p-5 rounded-xl">
+        <div className="bg-white sm:w-[360px] p-5 rounded-xl">
           <div className="flex items-center justify-between">
             <p className="font-Poppins font-semibold text-xl">
               Branding Designer

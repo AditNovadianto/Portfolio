@@ -18,7 +18,7 @@ const sections1 = [
     {
       image: bag,
       text: "Services",
-      id: "#service",
+      id: "#services",
       mt: "mt-7",
     },
   ],
