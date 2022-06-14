@@ -6,6 +6,9 @@ import golang from "../images/golang.png";
 import python from "../images/python.png";
 import tailwind from "../images/tailwind.png";
 import nodejs from "../images/nodejs.png";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const languages = [
   [
@@ -56,6 +59,10 @@ const languages = [
 ];
 
 const Languages = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <div className="pt-20 mt-5">
       <h1 className="font-Poppins font-bold text-2xl text-center">
@@ -65,8 +72,11 @@ const Languages = () => {
         Languages and tools that i used
       </p>
 
-      <div className="mt-10 sm:flex-row flex-col flex items-center justify-around">
-        <div className="flex items-center w-full justify-around">
+      <div className="mt-10 overflow-x-hidden sm:flex-row flex-col flex items-center justify-around">
+        <div
+          data-aos="fade-right"
+          className="flex items-center w-full justify-around"
+        >
           <div className="flex flex-col justify-around items-center">
             {languages[0].map((language, index) => (
               <img
@@ -90,7 +100,10 @@ const Languages = () => {
           </div>
         </div>
 
-        <div className="flex items-center sm:mt-0 mt-10 justify-around w-full">
+        <div
+          data-aos="fade-left"
+          className="flex items-center sm:mt-0 mt-10 justify-around w-full"
+        >
           <div className="flex flex-col items-center justify-center">
             {languages[2].map((language, index) => (
               <img
