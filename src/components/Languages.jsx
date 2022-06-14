@@ -60,7 +60,7 @@ const languages = [
 
 const Languages = () => {
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 2000, delay: 1000 });
   }, []);
 
   return (

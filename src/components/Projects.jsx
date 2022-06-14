@@ -76,7 +76,7 @@ const projects = [
 
 const Projects = () => {
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 2000, delay: 1000 });
   }, []);
 
   return (
