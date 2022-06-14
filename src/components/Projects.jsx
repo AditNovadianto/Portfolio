@@ -72,7 +72,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="mt-5 pt-20">
+    <div id="project" className="mt-5 pt-20">
       <h1 className="font-Poppins font-bold text-center text-2xl">Projects</h1>
       <p className="font-Poppins text-sm text-gray-500 text-center">
         My projects
@@ -89,8 +89,11 @@ const Projects = () => {
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >
-          {projects.map((project) => (
-            <SwiperSlide className="w-[270px] h-[400px] border-[1px] border-gray-300 shdw3 rounded-xl overflow-hidden">
+          {projects.map((project, index) => (
+            <SwiperSlide
+              key={index}
+              className="w-[270px] h-[400px] border-[1px] border-gray-300 shdw3 rounded-xl overflow-hidden"
+            >
               <div className="h-max cursor-pointer overflow-hidden">
                 <img
                   className="hover:scale-[1.1] duration-300 transition-all"
@@ -147,8 +150,11 @@ const Projects = () => {
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >
-          {projects.map((project) => (
-            <SwiperSlide className="w-[270px] h-[400px] border-[1px] border-gray-300 shdw3 rounded-xl overflow-hidden">
+          {projects.map((project, index) => (
+            <SwiperSlide
+              key={index}
+              className="w-[270px] h-[400px] border-[1px] border-gray-300 shdw3 rounded-xl overflow-hidden"
+            >
               <div className="h-max cursor-pointer overflow-hidden">
                 <img
                   className="hover:scale-[1.1] duration-300 transition-all"
