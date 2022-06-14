@@ -6,9 +6,13 @@ import timeTrackingDashboardProject from "../images/time-tracking-dashboard-proj
 import socialMediaDashboardProject from "../images/social-media-dashboard-project.png";
 import projectTrackingIntro from "../images/project-tracking-intro.png";
 import sunnysideLandingPageProject from "../images/sunnyside-landing-page-project.png";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
+
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const projects = [
   {
@@ -16,35 +20,30 @@ const projects = [
     title: "Umang Weather",
     github: "https://github.com/AditNovadianto/API-Weathers",
     livePreview: "http://api-weathers.vercel.app/",
-    aos: "fade-right",
   },
   {
     img: adviceGeneratorProject,
     title: "Advice Generator",
     github: "https://github.com/AditNovadianto/advice-generator-app-main",
     livePreview: "https://advice-generator-app-main-ochre.vercel.app/",
-    aos: "fade-right",
   },
   {
     img: expensesChartProject,
     title: "Expenses Chart",
     github: "https://github.com/AditNovadianto/expenses-chart-component-main",
     livePreview: "https://expenses-chart-component-main.vercel.app/",
-    aos: "fade-right",
   },
   {
     img: insureLandingPageProject,
     title: "Insure Landing Page",
     github: "https://github.com/AditNovadianto/insure-landing-page-master",
     livePreview: "https://insure-landing-page-master-xi.vercel.app/",
-    aos: "fade-right",
   },
   {
     img: timeTrackingDashboardProject,
     title: "Time Tracking",
     github: "https://github.com/AditNovadianto/time-tracking-dashboard-main",
     livePreview: "https://time-tracking-dashboard-main-eight.vercel.app/",
-    aos: "fade-left",
   },
   {
     img: socialMediaDashboardProject,
@@ -53,7 +52,6 @@ const projects = [
       "https://github.com/AditNovadianto/social-media-dashboard-with-theme-switcher-master",
     livePreview:
       "https://social-media-dashboard-with-theme-switcher-master-xi.vercel.app/",
-    aos: "fade-left",
   },
   {
     img: projectTrackingIntro,
@@ -62,7 +60,6 @@ const projects = [
       "https://github.com/AditNovadianto/project-tracking-intro-component-master",
     livePreview:
       "https://project-tracking-intro-component-master-brown.vercel.app/",
-    aos: "fade-left",
   },
   {
     img: sunnysideLandingPageProject,
@@ -70,15 +67,10 @@ const projects = [
     github:
       "https://github.com/AditNovadianto/sunnyside-agency-landing-page-main",
     livePreview: "https://sunnyside-agency-landing-page-main-sooty.vercel.app/",
-    aos: "fade-left",
   },
 ];
 
 const Projects = () => {
-  useEffect(() => {
-    Aos.init({ duration: 2000, delay: 1000 });
-  }, []);
-
   return (
     <div className="mt-5 pt-20">
       <h1 className="font-Poppins font-bold text-center text-2xl">Projects</h1>
@@ -86,57 +78,123 @@ const Projects = () => {
         My projects
       </p>
 
-      <div className="flex overflow-x-hidden flex-wrap mt-16 gap-10 items-center justify-center p-5">
-        {projects.map((project) => (
-          <div
-            data-aos={project.aos}
-            className="w-[270px] h-[350px] border-[1px] border-gray-300 shdw3 rounded-xl overflow-hidden"
-          >
-            <div className="h-max cursor-pointer overflow-hidden">
-              <img
-                className="hover:scale-[1.1] duration-300 transition-all"
-                src={project.img}
-                alt="weather-project"
-              />
-            </div>
+      <div className="flex overflow-x-hidden flex-wrap mt-16 items-center justify-center">
+        <Swiper
+          className="w-[1200px] p-10 hidden md:block"
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          slidesPerView={3}
+          navigation
+          pagination={{ clickable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log("slide change")}
+        >
+          {projects.map((project) => (
+            <SwiperSlide className="w-[270px] h-[400px] border-[1px] border-gray-300 shdw3 rounded-xl overflow-hidden">
+              <div className="h-max cursor-pointer overflow-hidden">
+                <img
+                  className="hover:scale-[1.1] duration-300 transition-all"
+                  src={project.img}
+                  alt="weather-project"
+                />
+              </div>
 
-            <div className="px-2 py-4 w-full border-b-[1px] border-gray-400">
-              <h1 className="font-Poppins font-semibold text-xl">
-                {project.title}
-              </h1>
-            </div>
-            <div className="px-2 py-3 w-max">
-              <a
-                className="flex items-center group transition-all"
-                href={project.github}
-                target="_blank"
-              >
+              <div className="px-2 py-4 w-full border-b-[1px] border-gray-400">
+                <h1 className="font-Poppins font-semibold text-xl">
+                  {project.title}
+                </h1>
+              </div>
+              <div className="px-2 py-3 w-max">
+                <a
+                  className="flex items-center group transition-all"
+                  href={project.github}
+                  target="_blank"
+                >
+                  <img
+                    className="w-[20px] group-hover:rotate-[30deg] transition-all"
+                    src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                    alt="github"
+                  />
+                  <p className="font-Poppins hover:text-blue-500 transition-all text-sm ml-3">
+                    Github Repository
+                  </p>
+                </a>
+                <a
+                  className="mt-2 flex items-center group transition-all"
+                  href={project.livePreview}
+                  target="_blank"
+                >
+                  <img
+                    className="w-[30px] -translate-x-1 group-hover:rotate-[30deg] transition-all"
+                    src="https://www.creative-tim.com/assets/icon-vite-f0eb8f14d3ba1b47beeb44734ff11f3c4bf84b9a731892f2fbc34fc0442a8421.jpg"
+                    alt="vite"
+                  />
+                  <p className="font-Poppins -translate-x-[9px] hover:text-blue-500 transition-all text-sm ml-3">
+                    Live Preview
+                  </p>
+                </a>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <Swiper
+          className="w-[400px] p-10 block md:hidden"
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log("slide change")}
+        >
+          {projects.map((project) => (
+            <SwiperSlide className="w-[270px] h-[400px] border-[1px] border-gray-300 shdw3 rounded-xl overflow-hidden">
+              <div className="h-max cursor-pointer overflow-hidden">
                 <img
-                  className="w-[20px] group-hover:rotate-[30deg] transition-all"
-                  src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                  alt="github"
+                  className="hover:scale-[1.1] duration-300 transition-all"
+                  src={project.img}
+                  alt="weather-project"
                 />
-                <p className="font-Poppins hover:text-blue-500 transition-all text-sm ml-3">
-                  Github Repository
-                </p>
-              </a>
-              <a
-                className="mt-2 flex items-center group transition-all"
-                href={project.livePreview}
-                target="_blank"
-              >
-                <img
-                  className="w-[30px] -translate-x-1 group-hover:rotate-[30deg] transition-all"
-                  src="https://www.creative-tim.com/assets/icon-vite-f0eb8f14d3ba1b47beeb44734ff11f3c4bf84b9a731892f2fbc34fc0442a8421.jpg"
-                  alt="vite"
-                />
-                <p className="font-Poppins -translate-x-[9px] hover:text-blue-500 transition-all text-sm ml-3">
-                  Live Preview
-                </p>
-              </a>
-            </div>
-          </div>
-        ))}
+              </div>
+
+              <div className="px-2 py-4 w-full border-b-[1px] border-gray-400">
+                <h1 className="font-Poppins font-semibold text-xl">
+                  {project.title}
+                </h1>
+              </div>
+              <div className="px-2 py-3 w-max">
+                <a
+                  className="flex items-center group transition-all"
+                  href={project.github}
+                  target="_blank"
+                >
+                  <img
+                    className="w-[20px] group-hover:rotate-[30deg] transition-all"
+                    src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                    alt="github"
+                  />
+                  <p className="font-Poppins hover:text-blue-500 transition-all text-sm ml-3">
+                    Github Repository
+                  </p>
+                </a>
+                <a
+                  className="mt-2 flex items-center group transition-all"
+                  href={project.livePreview}
+                  target="_blank"
+                >
+                  <img
+                    className="w-[30px] -translate-x-1 group-hover:rotate-[30deg] transition-all"
+                    src="https://www.creative-tim.com/assets/icon-vite-f0eb8f14d3ba1b47beeb44734ff11f3c4bf84b9a731892f2fbc34fc0442a8421.jpg"
+                    alt="vite"
+                  />
+                  <p className="font-Poppins -translate-x-[9px] hover:text-blue-500 transition-all text-sm ml-3">
+                    Live Preview
+                  </p>
+                </a>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
       <p className="mt-5 text-center font-Poppins font-semibold text-md">
         And many more projects that i made, to see them again you can click the

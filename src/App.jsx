@@ -4,6 +4,7 @@ import Languages from "./components/Languages";
 import NavbarMobile from "./components/NavbarMobile";
 import Projects from "./components/Projects";
 import Qualification from "./components/Qualification";
+import Certificates from "./components/Certificates";
 import Services from "./components/Services";
 import Skills from "./components/Skills";
 
@@ -25,6 +26,8 @@ const App = () => {
       <Languages />
 
       <Projects />
+
+      <Certificates />
     </main>
   );
 };
