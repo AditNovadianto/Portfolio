@@ -58,7 +58,7 @@ const Certificates = () => {
           <div
             data-aos={certificate.aos}
             key={index}
-            className="w-[270px] h-[300px] border-[1px] border-gray-300 shdw3 rounded-xl overflow-hidden"
+            className="w-[270px] h-[300px] border-[1px] mb-5 border-gray-300 shdw3 rounded-xl overflow-hidden"
           >
             <button
               onClick={certificate.button}

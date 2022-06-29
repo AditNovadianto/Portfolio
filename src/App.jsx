@@ -7,6 +7,7 @@ import Qualification from "./components/Qualification";
 import Certificates from "./components/Certificates";
 import Services from "./components/Services";
 import Skills from "./components/Skills";
+import ContactMe from "./components/ContactMe";
 
 const App = () => {
   return (
@@ -28,6 +29,8 @@ const App = () => {
       <Projects />
 
       <Certificates />
+
+      <ContactMe />
     </main>
   );
 };
