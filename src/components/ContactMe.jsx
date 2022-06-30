@@ -152,7 +152,7 @@ const ContactMe = () => {
                   error[input.name]
                     ? "translate-y-0 opacity-100"
                     : "-translate-y-4 opacity-0"
-                } text-red-500 transition-all font-medium font-Poppins text-sm duration-300`}
+                } text-red-500 transition-all mt-1 ml-2 font-medium font-Poppins text-sm duration-300`}
               >
                 {error[input.name]}
               </div>
