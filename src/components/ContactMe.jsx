@@ -109,7 +109,7 @@ const ContactMe = () => {
   ];
 
   return (
-    <div className="mt-5 pt-20">
+    <div id="contact" className="mt-5 pt-20">
       <h1 className="font-Poppins font-bold text-center text-2xl">
         Contact Me
       </h1>
@@ -134,7 +134,7 @@ const ContactMe = () => {
         <form onSubmit={submitHandler} className="mt-14">
           {inputs.map((input, index) => (
             <div key={index} className="relative mt-10">
-              <div className="relative z-[1000]">
+              <div className="relative z-[500]">
                 <input
                   className="border-2 border-slate-400 peer focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
                   invalid:border-pink-500 invalid:text-pink-600

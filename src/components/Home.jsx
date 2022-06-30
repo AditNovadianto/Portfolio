@@ -82,7 +82,8 @@ const Home = () => {
 
       <div className="mt-14">
         <h1 className="font-Poppins transition-all text-2xl font-semibold text-black">
-          Hi, I'am a <span className="font-bold text-blue-700" ref={el}></span>
+          Hi 👋, I'am a{" "}
+          <span className="font-bold text-blue-700" ref={el}></span>
         </h1>
         <p className="font-Poppins text-xl font-semibold text-blue-700"></p>
         <p className="font-Poppins mt-3 text-gray-600">
