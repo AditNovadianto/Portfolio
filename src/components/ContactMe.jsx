@@ -134,15 +134,18 @@ const ContactMe = () => {
         <form onSubmit={submitHandler} className="mt-14">
           {inputs.map((input, index) => (
             <div key={index} className="relative mt-10">
-              <h3 className="font-Poppins text-md absolute top-2 left-3">
-                {input.title}
-              </h3>
-              <div>
+              <div className="relative">
                 <input
-                  className="border-2 border-blue-500 rounded-lg pt-10 w-full p-2"
+                  className="border-2 border-slate-400 peer focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+                  invalid:border-pink-500 invalid:text-pink-600
+                  focus:invalid:border-pink-500 focus:invalid:ring-pink-500 rounded-lg pt-7 w-full p-2"
                   type={input.type}
                   onChange={input.change}
+                  placeholder=" "
                 />
+                <span className="bg-white px-1 font-Poppins font-medium text-md absolute left-2 -top-0.5 -translate-y-1/2 duration-300 peer-focus:-top-0.5 peer-placeholder-shown:top-1/2 transition-all">
+                  {input.title}
+                </span>
               </div>
               <div
                 className={`${
@@ -159,13 +162,15 @@ const ContactMe = () => {
               Massage
             </h3>
             <textarea
-              className="border-2 border-blue-500 rounded-lg pt-10 w-full p-2"
+              className="border-2 border-blue-500 focus:outline-none rounded-lg pt-10 w-full p-2"
               cols="30"
               rows="10"
             ></textarea>
           </div>
 
-          <button className="px-3 py-2 bg-blue-500 rounded-lg">Submit</button>
+          <button className="px-3 py-2 font-Poppins w-full mt-5 hover:bg-blue-600 active:bg-blue-700 text-white font-semibold bg-blue-500 rounded-lg">
+            Submit
+          </button>
         </form>
       </div>
     </div>
