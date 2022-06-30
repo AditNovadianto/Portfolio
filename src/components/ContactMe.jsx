@@ -1,17 +1,23 @@
 import { useState } from "react";
+import callIcon from "../images/call.svg";
+import emailIcon from "../images/email.svg";
+import locationIcon from "../images/location.svg";
 
 const contacts = [
   {
     title: "Call",
     paragraph: "999-000-222",
+    image: callIcon,
   },
   {
     title: "Email",
     paragraph: "aditya.novadianto@gmail.com",
+    image: emailIcon,
   },
   {
     title: "Location",
     paragraph: "Bintaro sektor 9, Tangerang Selatan",
+    image: locationIcon,
   },
 ];
 
@@ -121,10 +127,18 @@ const ContactMe = () => {
         <div>
           {contacts.map((contact, index) => (
             <div key={index} className="mt-7">
-              <h3 className="font-Poppins font-semibold text-xl">
-                {contact.title}
-              </h3>
-              <p className="font-Poppins text-md text-gray-500 font-medium">
+              <div className="flex items-center">
+                <img
+                  className="w-[25px]"
+                  src={contact.image}
+                  alt={contact.image}
+                />
+                <h3 className="font-Poppins ml-3 font-semibold text-xl">
+                  {contact.title}
+                </h3>
+              </div>
+
+              <p className="font-Poppins text-md mt-2 text-gray-500 font-medium">
                 {contact.paragraph}
               </p>
             </div>

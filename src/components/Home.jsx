@@ -92,7 +92,7 @@ const Home = () => {
         </p>
         <a
           className="flex hover:bg-blue-400 font-semibold transition-all w-max px-5 py-4 text-center rounded-lg bg-blue-300 text-white mt-5 items-center"
-          href="#"
+          href="#contact"
         >
           Contact Me <img className="w-[25px] ml-2" src={send} alt="send" />
         </a>
