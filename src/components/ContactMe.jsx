@@ -158,14 +158,15 @@ const ContactMe = () => {
           ))}
 
           <div className="relative mt-10">
-            <h3 className="font-Poppins text-md absolute top-2 left-3">
-              Massage
-            </h3>
             <textarea
-              className="border-2 border-blue-500 focus:outline-none rounded-lg pt-10 w-full p-2"
+              className="border-2 peer focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 border-slate-400 rounded-lg pt-7 w-full p-2"
               cols="30"
               rows="10"
+              placeholder=" "
             ></textarea>
+            <span className="bg-white px-1 font-Poppins font-medium text-md absolute left-2 -top-0.5 -translate-y-1/2 duration-300 peer-focus:-top-0.5 peer-placeholder-shown:top-6 transition-all">
+              Massage
+            </span>
           </div>
 
           <button className="px-3 py-2 font-Poppins w-full mt-5 hover:bg-blue-600 active:bg-blue-700 text-white font-semibold bg-blue-500 rounded-lg">
