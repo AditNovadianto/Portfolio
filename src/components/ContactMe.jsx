@@ -134,7 +134,7 @@ const ContactMe = () => {
         <form onSubmit={submitHandler} className="mt-14">
           {inputs.map((input, index) => (
             <div key={index} className="relative mt-10">
-              <div className="relative">
+              <div className="relative z-[1000]">
                 <input
                   className="border-2 border-slate-400 peer focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
                   invalid:border-pink-500 invalid:text-pink-600
@@ -149,8 +149,10 @@ const ContactMe = () => {
               </div>
               <div
                 className={`${
-                  error[input.name] ? "block" : "hidden"
-                } text-red-500`}
+                  error[input.name]
+                    ? "translate-y-0 opacity-100"
+                    : "-translate-y-4 opacity-0"
+                } text-red-500 transition-all font-medium font-Poppins text-sm duration-300`}
               >
                 {error[input.name]}
               </div>
