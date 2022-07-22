@@ -2,6 +2,7 @@ import { useState } from "react";
 import callIcon from "../images/call.svg";
 import emailIcon from "../images/email.svg";
 import locationIcon from "../images/location.svg";
+import swal from "sweetalert";
 
 const contacts = [
   {
@@ -88,7 +89,15 @@ const ContactMe = () => {
       return;
     }
 
-    window.location.reload();
+    swal({
+      title: "Thankyou!",
+      text: "I really appreciate for your response!",
+      icon: "success",
+    }).then((value) => {
+      if (value) {
+        window.location.reload();
+      }
+    });
   };
 
   console.log(error);

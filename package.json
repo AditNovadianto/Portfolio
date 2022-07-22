@@ -13,6 +13,7 @@
     "react-dom": "^18.0.0",
     "react-simple-typewriter": "^3.0.1",
     "react-typed": "^1.2.0",
+    "sweetalert": "^2.1.2",
     "swiper": "^8.2.4"
   },
   "devDependencies": {
