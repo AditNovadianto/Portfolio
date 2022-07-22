@@ -32,7 +32,10 @@ const Home = () => {
   }, []);
 
   return (
-    <div id="home" className="flex flex-col mt-5 w-full pt-24 p-5">
+    <div
+      id="home"
+      className="flex xl:flex-row max-w-[1000px] xl:items-center m-auto flex-col mt-5 w-full pt-24 p-5"
+    >
       <div className="flex items-center w-full justify-between">
         <div className="flex flex-col gap-10 justify-between mr-10 items-center">
           <a href="https://github.com/AditNovadianto" target="_blank">
@@ -80,7 +83,7 @@ const Home = () => {
         </svg>
       </div>
 
-      <div className="mt-14">
+      <div className="mt-14 xl:mt-0">
         <h1 className="font-Poppins transition-all text-2xl font-semibold text-black">
           Hi 👋, I'am a{" "}
           <span className="font-bold text-blue-700" ref={el}></span>

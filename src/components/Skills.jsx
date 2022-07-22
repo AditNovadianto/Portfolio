@@ -98,7 +98,7 @@ const Skills = () => {
         My technical level
       </p>
 
-      <div className="mt-10">
+      <div className="mt-10 max-w-[800px] m-auto">
         <div>
           <div className="flex items-center justify-between w-full">
             <div className="flex items-center">

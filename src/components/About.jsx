@@ -8,18 +8,20 @@ const About = () => {
         My introduction
       </p>
 
-      <img
-        className="w-[70%] m-auto rounded-lg shdw2 mt-10 mb-10"
-        src={adit}
-        alt="adit"
-      />
+      <div className="flex flex-col max-w-[800px] m-auto xl:flex-row items-center">
+        <img
+          className="w-[70%] m-auto rounded-lg shdw2 mt-10 mb-10"
+          src={adit}
+          alt="adit"
+        />
 
-      <p className="mt-5 font-Poppins bg-blue-100 text-center p-2 rounded-lg">
-        hello, my name is Aditya Novadianto Pratama, I am usually called Aditya.
-        I am now in grade 11 of Senior High School Plus Pembangunan Jaya. I come
-        from Central Java, and I am 17 years old, and I live in Bintaro, South
-        Tangerang.
-      </p>
+        <p className="mt-5 xl:ml-10 xl:mt-0 font-Poppins bg-blue-100 text-center p-2 rounded-lg">
+          hello, my name is Aditya Novadianto Pratama, I am usually called
+          Aditya. I am now in grade 11 of Senior High School Plus Pembangunan
+          Jaya. I come from Central Java, and I am 17 years old, and I live in
+          Bintaro, South Tangerang.
+        </p>
+      </div>
 
       <div className="mt-10 flex items-center gap-2 justify-evenly w-full">
         <div className="w-max font-Poppins text-center">
