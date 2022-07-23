@@ -140,17 +140,29 @@ const Navbar = () => {
           >
             Aditya
           </a>
-          <button onClick={navMobile}>
-            <img
-              className={`${
-                show
-                  ? "w-[25px] hover:scale-[1.2]"
-                  : "w-[20px] hover:scale-[1.1]"
-              } transition-all`}
-              src={show ? close : menu}
-              alt="navbar"
-            />
-          </button>
+          <div className="flex items-center">
+            <button
+              className="p-2 rounded-full bg-blue-400 transition-all dark:bg-blue-500"
+              onClick={darkMode}
+            >
+              <img
+                className="w-[25px] hover:scale-[1.2] transition-all"
+                src={dark ? lightModeIcon : darkModeIcon}
+                alt={dark ? "light mode icon" : "dark mode icon"}
+              />
+            </button>
+            <button className="ml-5" onClick={navMobile}>
+              <img
+                className={`${
+                  show
+                    ? "w-[25px] hover:scale-[1.2]"
+                    : "w-[20px] hover:scale-[1.1]"
+                } transition-all`}
+                src={show ? close : menu}
+                alt="navbar"
+              />
+            </button>
+          </div>
         </nav>
 
         <div
