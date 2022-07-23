@@ -101,10 +101,10 @@ const Qualification = () => {
 
   return (
     <div className="mt-5 pt-20">
-      <h1 className="font-Poppins font-bold text-2xl text-center">
+      <h1 className="font-Poppins transition-all dark:text-gray-200 font-bold text-2xl text-center">
         Qualification
       </h1>
-      <p className="font-Poppins text-center text-gray-500 text-sm">
+      <p className="font-Poppins transition-all dark:text-gray-300 text-center text-gray-500 text-sm">
         My personal journey
       </p>
 
@@ -120,7 +120,9 @@ const Qualification = () => {
             />
             <div
               className={`${
-                showEducation ? "text-blue-500 scale-[1.1]" : "text-gray-500"
+                showEducation
+                  ? "text-blue-500 scale-[1.1]"
+                  : "text-gray-500 dark:text-gray-400"
               } font-semibold ml-2 transition-all group-hover:text-blue-500 font-Poppins`}
             >
               Education
@@ -139,7 +141,9 @@ const Qualification = () => {
             />
             <div
               className={`${
-                showProgrammer ? "text-blue-500 scale-[1.1]" : "text-gray-500"
+                showProgrammer
+                  ? "text-blue-500 scale-[1.1]"
+                  : "text-gray-500 dark:text-gray-400"
               } font-semibold ml-2 transition-all group-hover:text-blue-500 font-Poppins`}
             >
               Programmer
@@ -155,15 +159,15 @@ const Qualification = () => {
                 className={`flex ${eduaction.flexRow} ${eduaction.justify} w-full items-center`}
               >
                 <div className="w-[45%]">
-                  <p className="font-Poppins font-semibold text-lg">
+                  <p className="font-Poppins transition-all dark:text-gray-200 font-semibold text-lg">
                     {eduaction.school}
                   </p>
-                  <p className="font-Poppins text-gray-500 text-sm">
+                  <p className="font-Poppins transition-all dark:text-gray-300 text-gray-500 text-sm">
                     {eduaction.location}
                   </p>
                   <div className="flex items-center mt-5">
                     <img className="w-[20px]" src={calendar} alt="calendar" />
-                    <p className="font-Poppins text-sm text-gray-500 ml-2">
+                    <p className="font-Poppins text-sm text-gray-500 dark:text-gray-300 transition-all ml-2">
                       {eduaction.year}
                     </p>
                   </div>
@@ -183,12 +187,12 @@ const Qualification = () => {
                 className={`flex ${programmer.flexRow} w-full items-center`}
               >
                 <div className="w-[45%]">
-                  <p className="font-Poppins font-semibold text-lg">
+                  <p className="font-Poppins transition-all dark:text-gray-200 font-semibold text-lg">
                     {programmer.language}
                   </p>
                   <div className="flex items-center mt-5">
                     <img className="w-[20px]" src={calendar} alt="calendar" />
-                    <p className="font-Poppins text-sm text-gray-500 ml-2">
+                    <p className="font-Poppins transition-all dark:text-gray-300 text-sm text-gray-500 ml-2">
                       {programmer.year}
                     </p>
                   </div>

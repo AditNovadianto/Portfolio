@@ -34,7 +34,7 @@ const Home = () => {
   return (
     <div
       id="home"
-      className="flex xl:flex-row max-w-[1000px] xl:items-center m-auto flex-col mt-5 w-full pt-24 p-5"
+      className="flex xl:flex-row max-w-[1000px] xl:items-center m-auto flex-col w-full pt-24 p-5"
     >
       <div className="flex items-center w-full justify-between">
         <div className="flex flex-col gap-10 justify-between mr-10 items-center">
@@ -84,26 +84,35 @@ const Home = () => {
       </div>
 
       <div className="mt-14 xl:mt-0">
-        <h1 className="font-Poppins transition-all text-2xl font-semibold text-black">
+        <h1 className="font-Poppins dark:text-gray-200 transition-all text-2xl font-semibold text-black">
           Hi 👋, I'am a{" "}
-          <span className="font-bold text-blue-700" ref={el}></span>
+          <span
+            className="font-bold text-blue-700 dark:text-blue-500"
+            ref={el}
+          ></span>
         </h1>
         <p className="font-Poppins text-xl font-semibold text-blue-700"></p>
-        <p className="font-Poppins mt-3 text-gray-600">
+        <p className="font-Poppins transition-all dark:text-gray-200 mt-3 text-gray-600">
           I am a student in grade 11 high school who likes coding, and learning
           new things for a better future.
         </p>
         <a
-          className="flex hover:bg-blue-400 font-semibold transition-all w-max px-5 py-4 text-center rounded-lg bg-blue-300 text-white mt-5 items-center"
+          className="flex hover:bg-blue-400 dark:text-gray-800 font-semibold transition-all w-max px-5 py-4 text-center rounded-lg bg-blue-300 text-white mt-5 items-center"
           href="#contact"
         >
           Contact Me <img className="w-[25px] ml-2" src={send} alt="send" />
         </a>
 
-        <a className="flex w-max items-center mt-10" href="#about">
+        <a className="flex group w-max items-center mt-10" href="#about">
           <img className="w-[25px]" src={mouse} alt="mouse" />
-          <p className="font-Poppins ml-1 text-gray-600">scroll down</p>
-          <img className="w-[20px] ml-1" src={arrowBottom} alt="arrow-bottom" />
+          <p className="font-Poppins ml-1 dark:text-gray-200 transition-all text-gray-600">
+            scroll down
+          </p>
+          <img
+            className="w-[20px] group-hover:translate-y-2 transition-all ml-2"
+            src={arrowBottom}
+            alt="arrow-bottom"
+          />
         </a>
       </div>
     </div>

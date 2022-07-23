@@ -46,10 +46,10 @@ const Certificates = () => {
 
   return (
     <div className="mt-5 pt-20">
-      <h1 className="font-Poppins font-bold text-center text-2xl">
+      <h1 className="font-Poppins transition-all dark:text-gray-200 font-bold text-center text-2xl">
         Certificates
       </h1>
-      <p className="font-Poppins text-sm text-gray-500 text-center">
+      <p className="font-Poppins transition-all dark:text-gray-300 text-sm text-gray-500 text-center">
         Certificate that i haved
       </p>
 
@@ -58,7 +58,7 @@ const Certificates = () => {
           <div
             data-aos={certificate.aos}
             key={index}
-            className="w-[270px] h-[300px] border-[1px] mb-5 border-gray-300 shdw3 rounded-xl overflow-hidden"
+            className="w-[270px] h-[300px] border-[1px] mb-5 border-gray-300 dark:border-gray-700 transition-all shdw3 rounded-xl overflow-hidden"
           >
             <button
               onClick={certificate.button}
@@ -72,10 +72,10 @@ const Certificates = () => {
             </button>
 
             <div className="px-2 py-4 w-full">
-              <h1 className="font-Poppins font-semibold text-xl">
+              <h1 className="font-Poppins transition-all dark:text-gray-200 font-semibold text-xl">
                 {certificate.title}
               </h1>
-              <p className="font-Poppins text-gray-600 mt-2 text-sm">
+              <p className="font-Poppins transition-all dark:text-gray-300 text-gray-600 mt-2 text-sm">
                 from: {certificate.from}
               </p>
             </div>
@@ -84,7 +84,7 @@ const Certificates = () => {
       </div>
 
       {showImageJs && (
-        <div className="fixed p-10 flex items-center justify-center top-0 z-[2000] flex-col bottom-0 left-0 right-0 bg-gray-600 bg-opacity-50">
+        <div className="fixed p-10 flex items-center justify-center top-0 z-[2000] flex-col bottom-0 left-0 right-0 bg-gray-600 dark:bg-gray-800 dark:bg-opacity-50 transition-all bg-opacity-50">
           <div>
             <button
               onClick={closeImage}
@@ -98,7 +98,7 @@ const Certificates = () => {
       )}
 
       {showImageReact && (
-        <div className="fixed p-10 flex items-center justify-center top-0 z-[2000] flex-col bottom-0 left-0 right-0 bg-gray-600 bg-opacity-50">
+        <div className="fixed p-10 flex items-center justify-center top-0 z-[2000] flex-col bottom-0 left-0 right-0 bg-gray-600 dark:bg-gray-800 dark:bg-opacity-50 transition-all bg-opacity-50">
           <div>
             <button
               onClick={closeImage}

@@ -52,10 +52,10 @@ const Services = () => {
 
   return (
     <div id="services" className="mt-5 pt-20">
-      <h1 className="font-Poppins px-5 font-bold text-2xl text-center">
+      <h1 className="font-Poppins transition-all dark:text-gray-200 px-5 font-bold text-2xl text-center">
         Services
       </h1>
-      <p className="font-Poppins px-5 text-center text-gray-500 text-sm">
+      <p className="font-Poppins transition-all dark:text-gray-300 px-5 text-center text-gray-500 text-sm">
         What i offer
       </p>
 
@@ -63,7 +63,7 @@ const Services = () => {
         {sections.map((section, index) => (
           <div key={index} className="w-[200px] shdw3 rounded-md p-5">
             <img className="w-[30px]" src={section.image} alt="web-grid" />
-            <p className="font-Poppins font-semibold text-2xl mt-5">
+            <p className="font-Poppins transition-all dark:text-gray-200 font-semibold text-2xl mt-5">
               {section.paragraph}
             </p>
             <button
@@ -106,14 +106,16 @@ const Services = () => {
       <div
         className={`${
           showUiUx ? "top-0 bottom-0 opacity-100" : "opacity-0"
-        } fixed left-0 right-0 bg-gray-500 z-[2000] px-10 bg-opacity-50 transition-all duration-300 w-full items-center flex flex-col justify-center`}
+        } fixed left-0 right-0 bg-gray-500 dark:bg-gray-800 dark:bg-opacity-50 z-[2000] px-10 bg-opacity-50 transition-all duration-300 w-full items-center flex flex-col justify-center`}
       >
-        <div className="bg-white sm:w-[360px] p-5 rounded-xl">
+        <div className="bg-white dark:bg-gray-500 transition-all sm:w-[360px] p-5 rounded-xl">
           <div className="flex items-center justify-between">
-            <p className="font-Poppins font-semibold text-xl">Ui/Ux Designer</p>
+            <p className="font-Poppins transition-all dark:text-gray-200 font-semibold text-xl">
+              Ui/Ux Designer
+            </p>
             <button onClick={closeButton}>
               <svg
-                className="fill-gray-500 hover:fill-red-500 transition-all"
+                className="fill-gray-500 dark:fill-gray-200 dark:hover:fill-red-500 hover:fill-red-500 transition-all"
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
@@ -130,7 +132,7 @@ const Services = () => {
             {services.map((service, index) => (
               <div key={index} className="mt-3 flex items-center">
                 <img className="w-[30px]" src={checklist} alt="checklist" />
-                <p className="font-Poppins ml-2 font-semibold text-gray-500">
+                <p className="font-Poppins ml-2 font-semibold transition-all dark:text-gray-300 text-gray-500">
                   {service}
                 </p>
               </div>
@@ -142,16 +144,16 @@ const Services = () => {
       <div
         className={`${
           showFrontend ? "top-0 bottom-0 opacity-100" : "opacity-0"
-        } fixed left-0 right-0 bg-gray-500 z-[2000] px-10 bg-opacity-50 transition-all duration-300 w-full items-center flex flex-col justify-center`}
+        } fixed left-0 right-0 bg-gray-500 dark:bg-gray-800 dark:bg-opacity-50 z-[2000] px-10 bg-opacity-50 transition-all duration-300 w-full items-center flex flex-col justify-center`}
       >
-        <div className="bg-white sm:w-[360px] p-5 rounded-xl">
+        <div className="bg-white dark:bg-gray-500 transition-all sm:w-[360px] p-5 rounded-xl">
           <div className="flex items-center justify-between">
-            <p className="font-Poppins font-semibold text-xl">
+            <p className="font-Poppins transition-all dark:text-gray-200 font-semibold text-xl">
               Frontend Developer
             </p>
             <button onClick={closeButton}>
               <svg
-                className="fill-gray-500 hover:fill-red-500 transition-all"
+                className="fill-gray-500 dark:fill-gray-200 dark:hover:fill-red-500 hover:fill-red-500 transition-all"
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
@@ -168,7 +170,7 @@ const Services = () => {
             {services.map((service, index) => (
               <div key={index} className="mt-3 flex items-center">
                 <img className="w-[30px]" src={checklist} alt="checklist" />
-                <p className="font-Poppins ml-2 font-semibold text-gray-500">
+                <p className="font-Poppins ml-2 font-semibold dark:text-gray-300 transition-all text-gray-500">
                   {service}
                 </p>
               </div>
@@ -180,16 +182,16 @@ const Services = () => {
       <div
         className={`${
           showBrandingDesigner ? "top-0 bottom-0 opacity-100" : "opacity-0"
-        } fixed left-0 right-0 bg-gray-500 z-[2000] px-10 bg-opacity-50 transition-all duration-300 w-full items-center flex flex-col justify-center`}
+        } fixed left-0 right-0 bg-gray-500 dark:bg-gray-800 dark:bg-opacity-50 z-[2000] px-10 bg-opacity-50 transition-all duration-300 w-full items-center flex flex-col justify-center`}
       >
-        <div className="bg-white sm:w-[360px] p-5 rounded-xl">
+        <div className="bg-white dark:bg-gray-500 transition-all sm:w-[360px] p-5 rounded-xl">
           <div className="flex items-center justify-between">
-            <p className="font-Poppins font-semibold text-xl">
+            <p className="font-Poppins transition-all dark:text-gray-200 font-semibold text-xl">
               Branding Designer
             </p>
             <button onClick={closeButton}>
               <svg
-                className="fill-gray-500 hover:fill-red-500 transition-all"
+                className="fill-gray-500 dark:fill-gray-200 dark:hover:fill-red-500 hover:fill-red-500 transition-all"
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
@@ -206,7 +208,7 @@ const Services = () => {
             {services.map((service, index) => (
               <div key={index} className="mt-3 flex items-center">
                 <img className="w-[30px]" src={checklist} alt="checklist" />
-                <p className="font-Poppins ml-2 font-semibold text-gray-500">
+                <p className="font-Poppins ml-2 font-semibold dark:text-gray-300 transition-all text-gray-500">
                   {service}
                 </p>
               </div>

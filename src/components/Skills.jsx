@@ -93,8 +93,10 @@ const Skills = () => {
 
   return (
     <div id="skills" className="pt-20 p-5">
-      <h1 className="font-Poppins font-bold text-2xl text-center">Skills</h1>
-      <p className="font-Poppins text-center text-gray-500 text-sm">
+      <h1 className="font-Poppins font-bold dark:text-gray-200 transition-all text-2xl text-center">
+        Skills
+      </h1>
+      <p className="font-Poppins text-center dark:text-gray-300 transition-all text-gray-500 text-sm">
         My technical level
       </p>
 
@@ -104,10 +106,10 @@ const Skills = () => {
             <div className="flex items-center">
               <img className="w-[25px] mr-3" src={bracket} alt="bracket" />
               <div>
-                <h1 className="font-Poppins font-bold text-2xl mt-2">
+                <h1 className="font-Poppins font-bold transition-all dark:text-gray-200 text-2xl mt-2">
                   Frontend developer
                 </h1>
-                <p className="font-Poppins font-semibold text-gray-500 mt-2">
+                <p className="font-Poppins transition-all dark:text-gray-300 font-semibold text-gray-500 mt-2">
                   Less than 1 year
                 </p>
               </div>
@@ -137,10 +139,10 @@ const Skills = () => {
                   key={index}
                   className="mt-10 flex items-center justify-between w-full"
                 >
-                  <p className="font-Poppins font-bold text-xl">
+                  <p className="font-Poppins dark:text-gray-200 transition-all font-bold text-xl">
                     {skill.language}
                   </p>
-                  <p className="font-Poppins font-semibold text-gray-500">
+                  <p className="font-Poppins transition-all dark:text-gray-300 font-semibold text-gray-500">
                     {skill.percentage}
                   </p>
                 </div>
@@ -157,10 +159,10 @@ const Skills = () => {
             <div className="flex items-center">
               <img className="w-[25px] mr-3" src={server} alt="server" />
               <div>
-                <h1 className="font-Poppins font-bold text-2xl mt-2">
+                <h1 className="font-Poppins transition-all dark:text-gray-200 font-bold text-2xl mt-2">
                   Backend developer
                 </h1>
-                <p className="font-Poppins font-semibold text-gray-500 mt-2">
+                <p className="font-Poppins transition-all dark:text-gray-300 font-semibold text-gray-500 mt-2">
                   Less than 1 year
                 </p>
               </div>
@@ -190,10 +192,10 @@ const Skills = () => {
                   key={index}
                   className="mt-10 flex items-center justify-between w-full"
                 >
-                  <p className="font-Poppins font-bold text-xl">
+                  <p className="font-Poppins transition-all dark:text-gray-200 font-bold text-xl">
                     {skill.language}
                   </p>
-                  <p className="font-Poppins font-semibold text-gray-500">
+                  <p className="font-Poppins transition-all dark:text-gray-300 font-semibold text-gray-500">
                     {skill.percentage}
                   </p>
                 </div>
@@ -214,10 +216,10 @@ const Skills = () => {
                 alt="swatch-book"
               />
               <div>
-                <h1 className="font-Poppins font-bold text-2xl mt-2">
+                <h1 className="font-Poppins transition-all dark:text-gray-200 font-bold text-2xl mt-2">
                   Designer
                 </h1>
-                <p className="font-Poppins font-semibold text-gray-500 mt-2">
+                <p className="font-Poppins transition-all dark:text-gray-300 font-semibold text-gray-500 mt-2">
                   Less than 1 year
                 </p>
               </div>
@@ -247,10 +249,10 @@ const Skills = () => {
                   key={index}
                   className="mt-10 flex items-center justify-between w-full"
                 >
-                  <p className="font-Poppins font-bold text-xl">
+                  <p className="font-Poppins transition-all dark:text-gray-200 font-bold text-xl">
                     {skill.application}
                   </p>
-                  <p className="font-Poppins font-semibold text-gray-500">
+                  <p className="font-Poppins transition-all dark:text-gray-300 font-semibold text-gray-500">
                     {skill.percentage}
                   </p>
                 </div>

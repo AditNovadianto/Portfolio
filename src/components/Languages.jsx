@@ -49,11 +49,12 @@ const languages = [
     {
       img: tailwind,
       width: "w-[60px]",
+      margin: "mt-5",
     },
     {
       img: nodejs,
       width: "w-[70px]",
-      margin: "mt-10",
+      margin: "mt-14",
     },
   ],
 ];
@@ -65,10 +66,10 @@ const Languages = () => {
 
   return (
     <div className="pt-20 mt-5">
-      <h1 className="font-Poppins font-bold text-2xl text-center">
+      <h1 className="font-Poppins transition-all dark:text-gray-200 font-bold text-2xl text-center">
         Languages & Tools
       </h1>
-      <p className="font-Poppins text-sm text-gray-500 text-center">
+      <p className="font-Poppins transition-all dark:text-gray-300 text-sm text-gray-500 text-center">
         Languages and tools that i used
       </p>
 

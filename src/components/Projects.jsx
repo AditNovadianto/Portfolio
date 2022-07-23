@@ -73,8 +73,10 @@ const projects = [
 const Projects = () => {
   return (
     <div id="project" className="mt-5 pt-20">
-      <h1 className="font-Poppins font-bold text-center text-2xl">Projects</h1>
-      <p className="font-Poppins text-sm text-gray-500 text-center">
+      <h1 className="font-Poppins transition-all dark:text-gray-200 font-bold text-center text-2xl">
+        Projects
+      </h1>
+      <p className="font-Poppins transition-all dark:text-gray-300 text-sm text-gray-500 text-center">
         My projects
       </p>
 
@@ -92,7 +94,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <SwiperSlide
               key={index}
-              className="w-[270px] h-[400px] border-[1px] border-gray-300 shdw3 rounded-xl overflow-hidden"
+              className="w-[270px] h-[400px] border-[1px] border-gray-300 dark:border-gray-700 transition-all shdw3 rounded-xl overflow-hidden"
             >
               <div className="h-max cursor-pointer overflow-hidden">
                 <img
@@ -103,7 +105,7 @@ const Projects = () => {
               </div>
 
               <div className="px-2 py-4 w-full border-b-[1px] border-gray-400">
-                <h1 className="font-Poppins font-semibold text-xl">
+                <h1 className="font-Poppins transition-all dark:text-gray-200 font-semibold text-xl">
                   {project.title}
                 </h1>
               </div>
@@ -118,7 +120,7 @@ const Projects = () => {
                     src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
                     alt="github"
                   />
-                  <p className="font-Poppins hover:text-blue-500 transition-all text-sm ml-3">
+                  <p className="font-Poppins dark:text-gray-200 hover:text-blue-500 transition-all text-sm ml-3">
                     Github Repository
                   </p>
                 </a>
@@ -132,7 +134,7 @@ const Projects = () => {
                     src="https://www.creative-tim.com/assets/icon-vite-f0eb8f14d3ba1b47beeb44734ff11f3c4bf84b9a731892f2fbc34fc0442a8421.jpg"
                     alt="vite"
                   />
-                  <p className="font-Poppins -translate-x-[9px] hover:text-blue-500 transition-all text-sm ml-3">
+                  <p className="font-Poppins dark:text-gray-200 -translate-x-[9px] hover:text-blue-500 transition-all text-sm ml-3">
                     Live Preview
                   </p>
                 </a>
@@ -153,7 +155,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <SwiperSlide
               key={index}
-              className="w-[270px] h-[400px] border-[1px] border-gray-300 shdw3 rounded-xl overflow-hidden"
+              className="w-[270px] h-[400px] border-[1px] border-gray-300 dark:border-gray-700 transition-all shdw3 rounded-xl overflow-hidden"
             >
               <div className="h-max cursor-pointer overflow-hidden">
                 <img
@@ -164,7 +166,7 @@ const Projects = () => {
               </div>
 
               <div className="px-2 py-4 w-full border-b-[1px] border-gray-400">
-                <h1 className="font-Poppins font-semibold text-xl">
+                <h1 className="font-Poppins transition-all dark:text-gray-200 font-semibold text-xl">
                   {project.title}
                 </h1>
               </div>
@@ -179,7 +181,7 @@ const Projects = () => {
                     src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
                     alt="github"
                   />
-                  <p className="font-Poppins hover:text-blue-500 transition-all text-sm ml-3">
+                  <p className="font-Poppins dark:text-gray-200 hover:text-blue-500 transition-all text-sm ml-3">
                     Github Repository
                   </p>
                 </a>
@@ -193,7 +195,7 @@ const Projects = () => {
                     src="https://www.creative-tim.com/assets/icon-vite-f0eb8f14d3ba1b47beeb44734ff11f3c4bf84b9a731892f2fbc34fc0442a8421.jpg"
                     alt="vite"
                   />
-                  <p className="font-Poppins -translate-x-[9px] hover:text-blue-500 transition-all text-sm ml-3">
+                  <p className="font-Poppins dark:text-gray-200 -translate-x-[9px] hover:text-blue-500 transition-all text-sm ml-3">
                     Live Preview
                   </p>
                 </a>
@@ -202,7 +204,7 @@ const Projects = () => {
           ))}
         </Swiper>
       </div>
-      <p className="mt-5 text-center font-Poppins font-semibold text-md">
+      <p className="mt-5 text-center transition-all dark:text-gray-200 font-Poppins font-semibold text-md">
         And many more projects that i made, to see them again you can click the
         following link{" "}
         <a

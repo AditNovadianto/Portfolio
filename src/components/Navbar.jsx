@@ -7,6 +7,8 @@ import sheet from "../images/sheet.svg";
 import bag from "../images/bags.svg";
 import project from "../images/project.svg";
 import send from "../images/send.svg";
+import darkModeIcon from "../images/moon.svg";
+import lightModeIcon from "../images/light-mode.svg";
 import { useEffect } from "react";
 
 const navbarMobiles = [
@@ -57,20 +59,20 @@ const navbarDesktop = [
     id: "home",
   },
   {
-    text: "Services",
-    id: "services",
-  },
-  {
     text: "About",
     id: "about",
   },
   {
-    text: "Projects",
-    id: "project",
-  },
-  {
     text: "Skills",
     id: "skills",
+  },
+  {
+    text: "Services",
+    id: "services",
+  },
+  {
+    text: "Projects",
+    id: "project",
   },
   {
     text: "Contact Me",
@@ -82,6 +84,21 @@ const Navbar = () => {
   const [show, setShow] = useState(false);
   const [color, setColor] = useState(false);
   const [bar, setBar] = useState({});
+  const [dark, setDark] = useState(localStorage.theme == "dark" ? true : false);
+
+  const darkMode = () => {
+    setDark(!dark);
+  };
+
+  useEffect(() => {
+    if (dark) {
+      localStorage.theme = "dark";
+      document.documentElement.classList.add("dark");
+    } else {
+      localStorage.theme = "light";
+      document.documentElement.classList.remove("dark");
+    }
+  }, [dark]);
 
   const navMobile = () => {
     setShow(!show);
@@ -196,15 +213,13 @@ const Navbar = () => {
 
       <header
         className={`${
-          color
-            ? "bg-blue-300 bg-opacity-70 px-7"
-            : "bg-blue-100 bg-opacity-50 px-10"
+          color ? "bg-blue-300 bg-opacity-70 px-7" : "bg-transparent px-10"
         } fixed lg:block hidden z-[1000] group overflow-hidden top-0 transition-all duration-1000 pt-5 w-full`}
       >
         <div className="flex pb-5 items-center justify-between w-full">
           <a
             className={`${
-              color ? "text-blue-800" : "text-blue-600"
+              color ? "text-blue-800" : "text-blue-600 dark:text-blue-400"
             } font-Poppins transition-all text-2xl font-semibold`}
             href="#home"
           >
@@ -220,7 +235,9 @@ const Navbar = () => {
                 }}
               >
                 <a
-                  className={`${color ? "text-blue-800" : "text-blue-600"} ${
+                  className={`${
+                    color ? "text-blue-800" : "text-blue-600 dark:text-blue-400"
+                  } ${
                     bar.id == section.id
                       ? "after:bg-white"
                       : "after:bg-transparent"
@@ -233,6 +250,16 @@ const Navbar = () => {
               </button>
             ))}
           </div>
+        </div>
+
+        <div className="fixed right-0 rounded-l-full border-2 dark:border-gray-600 bg-white dark:bg-gray-700 transition-all shadow-md shadow-black overflow-hidden bottom-[200px]">
+          <button onClick={darkMode} className="px-4 py-1">
+            <img
+              className="w-[50px] transition-all"
+              src={dark ? lightModeIcon : darkModeIcon}
+              alt={dark ? "light mode icon" : "dark mode icon"}
+            />
+          </button>
         </div>
       </header>
     </>

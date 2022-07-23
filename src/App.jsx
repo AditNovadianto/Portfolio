@@ -12,7 +12,7 @@ import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen transition-all duration-300 dark:bg-gray-800 bg-white">
       <Home />
 
       <Navbar />
