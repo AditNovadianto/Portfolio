@@ -110,7 +110,7 @@ const Qualification = () => {
 
       <div className="w-[300px] sm:w-[375px] m-auto px-2">
         <div className="flex items-center w-full justify-around my-10">
-          <button className="group flex items-center">
+          <button onClick={educationButton} className="group flex items-center">
             <img
               className={`${
                 showEducation ? "scale-[1.1]" : "scale-100"
@@ -118,16 +118,18 @@ const Qualification = () => {
               src={edu}
               alt="education"
             />
-            <button
-              onClick={educationButton}
+            <div
               className={`${
                 showEducation ? "text-blue-500 scale-[1.1]" : "text-gray-500"
               } font-semibold ml-2 transition-all group-hover:text-blue-500 font-Poppins`}
             >
               Education
-            </button>
+            </div>
           </button>
-          <button className="group flex items-center">
+          <button
+            onClick={programmerButton}
+            className="group flex items-center"
+          >
             <img
               className={`${
                 showProgrammer ? "scale-[1.1]" : "scale-100"
@@ -135,14 +137,13 @@ const Qualification = () => {
               src={bag}
               alt="bag"
             />
-            <button
-              onClick={programmerButton}
+            <div
               className={`${
                 showProgrammer ? "text-blue-500 scale-[1.1]" : "text-gray-500"
               } font-semibold ml-2 transition-all group-hover:text-blue-500 font-Poppins`}
             >
               Programmer
-            </button>
+            </div>
           </button>
         </div>
 
