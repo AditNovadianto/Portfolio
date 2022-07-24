@@ -194,7 +194,7 @@ const ContactMe = () => {
             </span>
           </div>
 
-          <button className="px-3 py-2 font-Poppins w-full mt-5 hover:bg-blue-600 active:bg-blue-700 text-white font-semibold bg-blue-500 rounded-lg">
+          <button className="px-3 py-2 font-Poppins w-full mt-5 transition-all hover:bg-blue-600 active:bg-blue-700 text-white font-semibold bg-blue-500 rounded-lg">
             Submit
           </button>
         </form>

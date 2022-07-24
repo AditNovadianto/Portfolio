@@ -265,17 +265,16 @@ const Navbar = () => {
             ))}
           </div>
         </div>
-
-        <div className="fixed right-0 rounded-l-full border-2 dark:border-gray-600 bg-white dark:bg-gray-700 transition-all shadow-md shadow-black overflow-hidden bottom-[200px]">
-          <button onClick={darkMode} className="px-4 py-1">
-            <img
-              className="w-[50px] transition-all"
-              src={dark ? lightModeIcon : darkModeIcon}
-              alt={dark ? "light mode icon" : "dark mode icon"}
-            />
-          </button>
-        </div>
       </header>
+      <div className="fixed right-0 z-[1000] rounded-l-full border-2 dark:border-gray-600 bg-white dark:bg-gray-700 transition-all shadow-md shadow-black overflow-hidden bottom-[200px]">
+        <button onClick={darkMode} className="px-4 py-1">
+          <img
+            className="w-[50px] transition-all"
+            src={dark ? lightModeIcon : darkModeIcon}
+            alt={dark ? "light mode icon" : "dark mode icon"}
+          />
+        </button>
+      </div>
     </>
   );
 };

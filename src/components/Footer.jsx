@@ -58,7 +58,7 @@ const medias = [
 
 const Footer = () => {
   return (
-    <div className="mt-20 px-7 py-20 bg-blue-500">
+    <div className="mt-20 px-7 py-20 bg-blue-500 dark:bg-blue-700 transition-all">
       <div className="flex max-w-[1500px] m-auto flex-col md:flex-row md:items-start items-center justify-between">
         <div className="flex flex-col items-center justify-center md:items-start">
           <h2 className="font-Poppins font-semibold text-white text-3xl">
