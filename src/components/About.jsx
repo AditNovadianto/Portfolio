@@ -17,7 +17,7 @@ const About = () => {
           alt="adit"
         />
 
-        <p className="mt-5 xl:ml-10 xl:mt-0 font-Poppins transition-all text-gray-900 bg-blue-100 text-center p-2 rounded-lg">
+        <p className="mt-5 xl:ml-10 xl:mt-0 font-Poppins transition-all text-gray-900 bg-blue-200 dark:bg-blue-400 text-center p-2 rounded-lg">
           hello, my name is Aditya Novadianto Pratama, I am usually called
           Aditya. I am now in grade 11 of Senior High School Plus Pembangunan
           Jaya. I come from Central Java, and I am 17 years old, and I live in
