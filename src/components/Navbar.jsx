@@ -9,6 +9,7 @@ import project from "../images/project.svg";
 import send from "../images/send.svg";
 import darkModeIcon from "../images/moon.svg";
 import lightModeIcon from "../images/light-mode.svg";
+import logo from "../images/favicon.ico";
 import { useEffect } from "react";
 
 const navbarMobiles = [
@@ -124,7 +125,7 @@ const Navbar = () => {
     <>
       <header
         className={`${
-          color ? "bg-blue-300 px-7" : "bg-blue-200 px-10"
+          color ? "bg-blue-400 px-6" : "bg-blue-200 px-8 dark:bg-blue-300"
         } fixed lg:hidden block z-[1000] group overflow-hidden top-0 transition-all duration-1000 pt-5 w-full rounded-b-2xl shdw`}
       >
         <nav
@@ -135,14 +136,15 @@ const Navbar = () => {
           <a
             className={`${
               color ? "text-blue-800" : "text-blue-600"
-            } font-Poppins transition-all text-lg font-semibold`}
+            } font-Poppins flex items-center transition-all text-lg font-semibold`}
             href="#home"
           >
-            Aditya
+            <img className="w-[30px]" src={logo} alt="logo" />
+            <p className="ml-2">Aditya</p>
           </a>
           <div className="flex items-center">
             <button
-              className="p-2 rounded-full bg-blue-400 transition-all dark:bg-blue-500"
+              className="p-2 rounded-full bg-blue-300 transition-all dark:bg-blue-500"
               onClick={darkMode}
             >
               <img
@@ -234,10 +236,11 @@ const Navbar = () => {
           <a
             className={`${
               color ? "text-blue-800" : "text-blue-600 dark:text-blue-400"
-            } font-Poppins transition-all text-2xl font-semibold`}
+            } font-Poppins flex items-center transition-all text-2xl font-semibold`}
             href="#home"
           >
-            Aditya
+            <img src={logo} alt="logo" />
+            <p className="ml-2">Aditya</p>
           </a>
 
           <div className="flex flex-row">
