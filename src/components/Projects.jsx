@@ -118,7 +118,7 @@ const Projects = () => {
                   <img
                     className="w-[20px] group-hover:rotate-[30deg] transition-all"
                     src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                    alt="github"
+                    alt="github icon"
                   />
                   <p className="font-Poppins dark:text-gray-200 hover:text-blue-500 transition-all text-sm ml-3">
                     Github Repository
@@ -130,11 +130,11 @@ const Projects = () => {
                   target="_blank"
                 >
                   <img
-                    className="w-[30px] -translate-x-1 group-hover:rotate-[30deg] transition-all"
-                    src="https://www.creative-tim.com/assets/icon-vite-f0eb8f14d3ba1b47beeb44734ff11f3c4bf84b9a731892f2fbc34fc0442a8421.jpg"
-                    alt="vite"
+                    className="w-[20px] -translate-x-1 group-hover:rotate-[30deg] ml-1 transition-all"
+                    src="https://vitejs.dev/logo.svg"
+                    alt="vite icon"
                   />
-                  <p className="font-Poppins dark:text-gray-200 -translate-x-[9px] hover:text-blue-500 transition-all text-sm ml-3">
+                  <p className="font-Poppins dark:text-gray-200 -translate-x-[9px] hover:text-blue-500 transition-all text-sm ml-[17px]">
                     Live Preview
                   </p>
                 </a>
@@ -179,7 +179,7 @@ const Projects = () => {
                   <img
                     className="w-[20px] group-hover:rotate-[30deg] transition-all"
                     src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                    alt="github"
+                    alt="github icon"
                   />
                   <p className="font-Poppins dark:text-gray-200 hover:text-blue-500 transition-all text-sm ml-3">
                     Github Repository
@@ -191,11 +191,11 @@ const Projects = () => {
                   target="_blank"
                 >
                   <img
-                    className="w-[30px] -translate-x-1 group-hover:rotate-[30deg] transition-all"
-                    src="https://www.creative-tim.com/assets/icon-vite-f0eb8f14d3ba1b47beeb44734ff11f3c4bf84b9a731892f2fbc34fc0442a8421.jpg"
-                    alt="vite"
+                    className="w-[20px] ml-1 -translate-x-1 group-hover:rotate-[30deg] transition-all"
+                    src="https://vitejs.dev/logo.svg"
+                    alt="vite icon"
                   />
-                  <p className="font-Poppins dark:text-gray-200 -translate-x-[9px] hover:text-blue-500 transition-all text-sm ml-3">
+                  <p className="font-Poppins dark:text-gray-200 -translate-x-[9px] hover:text-blue-500 transition-all text-sm ml-[17px]">
                     Live Preview
                   </p>
                 </a>
