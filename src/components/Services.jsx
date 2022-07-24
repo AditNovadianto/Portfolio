@@ -1,5 +1,7 @@
 import webGrid from "../images/web-grid.svg";
 import checklist from "../images/checklist.svg";
+import pen from "../images/pen.svg";
+import arrowLeftRight from "../images/arrow-left-and-right.svg";
 import { useState } from "react";
 
 const services = [
@@ -39,12 +41,12 @@ const Services = () => {
       button: UiUxButton,
     },
     {
-      image: webGrid,
+      image: arrowLeftRight,
       paragraph: "Frontend Developers",
       button: frontendButton,
     },
     {
-      image: webGrid,
+      image: pen,
       paragraph: "Branding Designer",
       button: brandingDesignerButton,
     },

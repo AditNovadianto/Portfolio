@@ -225,7 +225,9 @@ const Navbar = () => {
 
       <header
         className={`${
-          color ? "bg-blue-300 bg-opacity-70 px-7" : "bg-transparent px-10"
+          color
+            ? "bg-blue-300 bg-opacity-70 px-7 backdrop-blur"
+            : "bg-transparent px-10"
         } fixed lg:block hidden z-[1000] group overflow-hidden top-0 transition-all duration-1000 pt-5 w-full`}
       >
         <div className="flex pb-5 items-center justify-between w-full">

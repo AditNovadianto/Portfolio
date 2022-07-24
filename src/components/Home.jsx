@@ -34,7 +34,7 @@ const Home = () => {
   return (
     <div
       id="home"
-      className="flex xl:flex-row max-w-[1000px] xl:items-center m-auto flex-col w-full pt-24 p-5"
+      className="flex xl:flex-row max-w-[1000px] xl:items-center transition-all m-auto flex-col w-full xl:pt-44 pt-24 p-5"
     >
       <div className="flex items-center w-full justify-between">
         <div className="flex flex-col gap-10 justify-between mr-10 items-center">
